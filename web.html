@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Koleksi Foto Gres</title>
+    <title>TemanKita.ofc</title>
     <!-- Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,199 +22,243 @@
   <body>
     <!-- NavBar start-->
     <nav class="navbar">
-      <h3 class="navbar-logo">Kenangan<span>Indah</span></h3>
-
+      <div class="logo-wrapper">
+        <img src="img/logo temanKita.png" alt="logo temanKita" class="logo" />
+      </div>
       <div class="navbar-nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <div class="dropdown">
-          <a href="#option" class="dropbtn"
-            >Koleksi <i data-feather="chevron-down"></i>
-          </a>
-          <div class="dropdown-content">
-            <a href="#fotografi">Fotografi</a>
-            <a href="#cerpen">Cerpen</a>
-            <a href="#puisi">Puisi</a>
-            <a href="#poster">Poster</a>
-            <a href="#infografis">Infografis</a>
-          </div>
-        </div>
-        <a href="#contact">Contact</a>
+        <a href="#part-of">Our Story</a>
+        <a href="#collaboration">Collaboration</a>
       </div>
-      <a href="#" id="hamburger-menu">
+      <a href="#hamburger-menu" id="hamburger-menu">
         <i data-feather="menu"></i>
       </a>
     </nav>
     <!-- NavBar end-->
 
     <!-- Hero Section Start -->
-    <section class="hero" id="home">
-      <main class="content">
-        <h1>FOTOGRAFI|<span>Gres</span></h1>
-        <p>
-          Website ini adalah ruang kreatif yang menampilkan hasil karya
-          fotografi dan editan warna terbaik milikku. Di sini, kamu bisa
-          menjelajahi koleksi foto, melihat berbagai tone unik dari preset yang
-          aku ciptakan, dan jika tertarik, kamu bisa langsung membelinya melalui
-          akun Lynk yang sudah terhubung. Web ini dirancang untuk para pecinta
-          visual yang ingin mengeksplorasi dunia warna dan mendapatkan sentuhan
-          edit yang estetik dalam setiap momen.
+    <section class="hero animate" id="home">
+      <main class="content" data-stagger>
+        <div class="logo-wrapper animate">
+          <img
+            src="img/logo temanKita.png"
+            alt="logo temanKita"
+            class="logo micro"
+          />
+        </div>
+
+        <p class="animate">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+          inventore quam beatae. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Architecto ut commodi sed molestiae ad ipsam est.
+          Distinctio ipsam consequuntur expedita dolore similique? Non sunt,
+          repellat explicabo dolorum aspernatur tempore commodi?
         </p>
-        <a href="#option" class="cta">Lihat Kenangan</a>
+
+        <a href="#about" class="cta animate micro">Lihat Kenangan</a>
       </main>
     </section>
     <!-- Hero Section End -->
 
-    <!-- About Section Start-->
-    <section class="about" id="about">
-      <h2><span>About</span> Me</h2>
-      <div class="row">
-        <div class="about-img">
-          <img src="img/" alt="Foto Profile Gres" />
-        </div>
-        <div class="content">
-          <h3>Hello My Name is <span>Grestama</span></h3>
-          <p>
-            Seorang fotografer yang gemar menangkap momen sederhana menjadi luar
-            biasa lewat lensa dan sentuhan warna. Dunia fotografi bukan sekadar
-            hobi tapi cara bagiku bercerita tanpa kata. Di web ini, kamu akan
-            menemukan berbagai hasil jepretan dan editanku, mulai dari potret
-            suasana alam, city lights, hingga detail kecil yang sering luput
-            dari pandangan. Semua foto di sini lahir dari rasa ingin tahu dan
-            eksplorasi warna yang aku tuangkan ke dalam preset-preset eksklusif.
-            Kalau kamu suka tone warna atau gaya editanku, kamu bisa mendapatkan
-            preset-nya langsung dari sini. Cukup klik, dan kamu akan diarahkan
-            ke akun Lynk-ku untuk proses pembelian yang mudah dan cepat. Terima
-            kasih sudah mampir. Yuk, jelajahi dunia lewat lensaku.
-          </p>
-        </div>
+    <!-- About Section Start -->
+    <section class="section-info animate" id="about" data-stagger>
+      <div class="header-info animate">
+        <h2 class="animate">About <span>Teman</span>Kita</h2>
+        <p class="animate">
+          TemanKita adalah organisasi pendidikan nasional yang fokus pada
+          peningkatan kualitas belajar, kolaborasi, dan akses informasi bagi
+          pelajar di seluruh Indonesia.
+        </p>
       </div>
-    </section>
-    <!-- About Section End-->
 
-    <!-- Menu Section Start -->
-    <section id="option" class="option">
-      <h2><span>Koleksi</span>Ku</h2>
-      <p>
-        Koleksi fotoku adalah kumpulan momen yang tertangkap dari sudut pandang
-        berbeda—penuh warna, emosi, dan cerita. Setiap gambar membawa nuansa
-        tersendiri, mulai dari landscape yang tenang hingga potret yang penuh
-        karakter. Diedit dengan sentuhan tone khas, koleksi ini bukan sekadar
-        visual, tapi juga pengalaman rasa.
-      </p>
-      <div class="row">
-        <div class="option-card">
-          <img src="img/1.jpg" alt="Kamera" class="option-card-image" />
-          <h3 class="option-card-tittle">- Kamera -</h3>
-          <p class="option-card-price">IDR 15.000</p>
-          <a href="#" class="option-card-button">Ambil Preset</a>
+      <div class="grid-info animate">
+        <div class="image-box">
+          <img src="img/1.jpg" alt="Gedung Kegiatan TemanKita" />
+          <div class="label-info">Part of TemanKita</div>
         </div>
-        <div class="option-card">
-          <img src="img/1.jpg" alt="Kamera" class="option-card-image" />
-          <h3 class="option-card-tittle">- Kamera -</h3>
-          <p class="option-card-price">IDR 15.000</p>
-          <a href="#" class="option-card-button">Ambil Preset</a>
-        </div>
-        <div class="option-card">
-          <img src="img/1.jpg" alt="Kamera" class="option-card-image" />
-          <h3 class="option-card-tittle">- Kamera -</h3>
-          <p class="option-card-price">IDR 15.000</p>
-          <a href="#" class="option-card-button">Ambil Preset</a>
-        </div>
-        <div class="option-card">
-          <img src="img/1.jpg" alt="Kamera" class="option-card-image" />
-          <h3 class="option-card-tittle">- Kamera -</h3>
-          <p class="option-card-price">IDR 15.000</p>
-          <a href="#" class="option-card-button">Ambil Preset</a>
+
+        <div class="content-info animate">
+          <div class="item-info">
+            <h3>Program Pengembangan</h3>
+            <p>
+              TemanKita menyediakan pelatihan dan bimbingan belajar berbasis
+              kebutuhan pelajar.
+            </p>
+          </div>
+
+          <div class="item-info">
+            <h3>Mentor Berkualitas</h3>
+            <p>
+              Didukung mentor berpengalaman di bidang pendidikan dan teknologi.
+            </p>
+          </div>
+
+          <div class="item-info">
+            <h3>Platform Digital</h3>
+            <p>
+              Pelajar dapat mengakses materi dan forum diskusi melalui platform
+              online TemanKita.
+            </p>
+          </div>
+
+            <a href="#" class="btn-info animate">Pelajari Tentang Kami</a>
+            
+          </div>
         </div>
       </div>
-      <a href="#" class="next">Lihat Lainnya</a>
     </section>
-    <!-- Menu Section End -->
+
+    <!-- About Section End -->
+
+    <!-- Part of TemanKita Section Start -->
+    <section class="about animate" id="part-of" data-stagger>
+      <h2 class="about-title animate">Part of <span>Teman</span>Kita</h2>
+
+      <p class="animate">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+        aspernatur error. Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Excepturi dignissimos sed tempore voluptas, autem aut quia, quo
+        repellendus sapiente placeat quam incidunt laborum nesciunt doloribus
+        odio nostrum. Soluta, architecto corrupti.
+      </p>
+
+      <div class="carousel-container animate">
+        <button class="carousel-btn prev micro">‹</button>
+
+        <div class="carousel-track">
+          <div class="gallery-item micro" style="--i: 0">
+            <img src="img/1.jpg" alt="Foto 1" class="gallery-image" />
+            <a href="#" class="gallery-button">Lihat Kenangan</a>
+          </div>
+
+          <div class="gallery-item micro" style="--i: 1">
+            <img src="img/1.jpg" alt="Foto 2" class="gallery-image" />
+            <a href="#" class="gallery-button">Lihat Kenangan</a>
+          </div>
+
+          <div class="gallery-item micro" style="--i: 2">
+            <img src="img/1.jpg" alt="Foto 3" class="gallery-image" />
+            <a href="#" class="gallery-button">Lihat Kenangan</a>
+          </div>
+
+          <div class="gallery-item micro" style="--i: 3">
+            <img src="img/1.jpg" alt="Foto 4" class="gallery-image" />
+            <a href="#" class="gallery-button">Lihat Kenangan</a>
+          </div>
+
+          <div class="gallery-item micro" style="--i: 4">
+            <img src="img/1.jpg" alt="Foto 5" class="gallery-image" />
+            <a href="#" class="gallery-button">Lihat Kenangan</a>
+          </div>
+
+          <div class="gallery-item micro" style="--i: 5">
+            <img src="img/1.jpg" alt="Foto 6" class="gallery-image" />
+            <a href="#" class="gallery-button">Lihat Kenangan</a>
+          </div>
+
+          <div class="gallery-item micro" style="--i: 6">
+            <img src="img/1.jpg" alt="Foto 7" class="gallery-image" />
+            <a href="#" class="gallery-button">Lihat Kenangan</a>
+          </div>
+
+          <div class="gallery-item micro" style="--i: 7">
+            <img src="img/1.jpg" alt="Foto 8" class="gallery-image" />
+            <a href="#" class="gallery-button">Lihat Kenangan</a>
+          </div>
+        </div>
+
+        <button class="carousel-btn next micro">›</button>
+      </div>
+    </section>
+
+    <!-- Part of TemanKita Section End -->
 
     <!-- Kontak Saya -->
-    <section id="contact" class="contact">
-      <h2><span>Kontak</span> Kami</h2>
-      <p>
-        Punya pertanyaan, kerja sama, atau ingin custom preset? Jangan ragu
-        untuk menghubungi saya melalui form di bawah, atau langsung DM via
-        Instagram dan akun Lynk yang terhubung. Saya siap membantu! 😊
+    <section id="collaboration" class="collaboration animate" data-stagger>
+      <h2 class="animate">Collaboration with <span>Teman</span>Kita</h2>
+      <p class="infra-desc animate">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, doloribus eveniet sunt totam reiciendis accusamus officiis at ad consectetur sequi sit voluptatem soluta in minus libero aliquam non impedit blanditiis?
       </p>
-      <div class="row">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.304448019412!2d107.63034599999999!3d-6.9733626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9adf177bf8d%3A0x437398556f9fa03!2sUniversitas%20Telkom!5e0!3m2!1sid!2sid!4v1750560836402!5m2!1sid!2sid"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="map"
-        ></iframe>
+      <div class="row animate">
+        <div class="infra-card">
+          <img src="1.jpg" alt="infrastruktur">
+        </div>
 
-        <form id="contactForm">
-          <div class="input-group">
-            <i data-feather="user"></i>
-            <input type="text" placeholder="Nama Anda" id="name" required />
-          </div>
-          <div class="input-group">
-            <i data-feather="mail"></i>
-            <input type="email" placeholder="Email Anda" id="email" required />
-          </div>
-          <div class="input-group">
-            <i data-feather="message-square"></i>
-            <textarea
-              placeholder="Pesan Anda"
-              id="message"
-              rows="5"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="cta">Kirim Pesan</button>
-        </form>
+        <div class="infra-card">
+          <img src="1.jpg" alt="infrastruktur">
+        </div>
+
+        <div class="infra-card">
+          <img src="1.jpg" alt="infrastruktur">
+        </div>
+
+        <div class="infra-card">
+          <img src="1.jpg" alt="infrastruktur">
+        </div>
       </div>
+      <p class="infra-desc animate">
+        Kami bangga bermitra dengan perusahaan teknologi terkemuka untuk menyediakan
+        infrastruktur yang handal dan berkinerja tinggi. Kolaborasi ini memungkinkan kami
+        memberikan layanan terbaik dengan dukungan teknologi terkini dan keamanan yang terjamin.
+      </p>
     </section>
 
     <!-- Kontak End -->
-    <!-- image Modal -->
-    <div id="imageModal" class="modal">
-      <span class="close-button">&times;</span>
-      <img class="modal-content" id="modalImage" alt="" />
-      <div id="captionText"></div>
-    </div>
-    <!-- image Modal end -->
 
     <!-- Footer Start -->
-    <footer>
-      <div class="social">
-        <a
-          href="https://www.instagram.com/grrstant_?igsh=NDl5NmdsOHpldnlv"
-          target="_blank"
-          aria-label="Instagram"
-          ><i data-feather="instagram"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/grestamanaufaltsabit?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          target="_blank"
-          aria-label="linkedin"
-          ><i data-feather="linkedin"></i
-        ></a>
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=gresnaufal123@gmail.com"
-          target="_blank"
-          aria-label="mail"
-          ><i data-feather="mail"></i
-        ></a>
+    <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3 class="title">Profil</h3>
+        <p>Lorem ipsum dolor sit amet. Sistem portfolio pribadi yang berfokus pada fotografi dan desain.</p>
+
+        <div class="social">
+          <a href="https://www.instagram.com/temankitaofc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+          <i data-feather="instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/temankita/" target="_blank" aria-label="linkedin">
+          <i data-feather="linkedin"></i>
+          </a>
+          <a href="#" target="_blank" aria-label="mail">
+          <i data-feather="mail"></i>
+          </a>
+        </div>
       </div>
 
-      <div class="links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#option">Koleksi</a>
-        <a href="#contact">Contact</a>
+      <div class="footer-col">
+        <h3 class="title">Tautan</h3>
+        <div class="links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#option">Koleksi</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
 
-      <div class="credit">
-        <p>Created by <a href="">@grrstant_</a>. &copy;2025.</p>
+      <div class="footer-col">
+        <h3 class="title">Informasi</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, illum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
       </div>
+
+      <div class="footer-col">
+        <h3 class="title">Kirim Pesan</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Pesan Anda" />
+          <button><i data-feather="send"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="credit">
+      <p>Created by <a href="">TemanKita</a>. &copy;2025.</p>
+    </div>
     </footer>
+
     <!-- Footer End -->
     <!-- Feather Icons -->
     <script>

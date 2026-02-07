@@ -1,3 +1,112 @@
+// Carousel Selector
+const track = document.querySelector(".carousel-track");
+const btnPrev = document.querySelector(".carousel-btn.prev");
+const btnNext = document.querySelector(".carousel-btn.next");
+const items = document.querySelectorAll(".gallery-item");
+
+let index = 0;
+
+// Hitung width item + gap
+function getItemWidth() {
+  const style = window.getComputedStyle(track);
+  const gap = parseInt(style.gap) || 0;
+  return items[0].offsetWidth + gap;
+}
+
+// Hitung berapa item yang terlihat
+function getVisibleCount() {
+  const containerWidth = track.parentElement.offsetWidth;
+  const itemWidth = getItemWidth();
+  return Math.floor(containerWidth / itemWidth);
+}
+
+// Hitung batas maksimum index
+function getMaxIndex() {
+  const visible = getVisibleCount();
+  return Math.max(0, items.length - visible);
+}
+
+// Update posisi carousel
+function updateCarousel() {
+  const moveX = index * getItemWidth();
+  track.style.transform = `translateX(-${moveX}px)`;
+}
+
+// Next (Looping)
+btnNext.addEventListener("click", () => {
+  const maxIndex = getMaxIndex();
+  if (index < maxIndex) {
+    index++;
+  } else {
+    index = 0; // balik ke awal
+  }
+  updateCarousel();
+});
+
+// Prev (Looping)
+btnPrev.addEventListener("click", () => {
+  const maxIndex = getMaxIndex();
+  if (index > 0) {
+    index--;
+  } else {
+    index = maxIndex; // loncat ke item terakhir yang bisa tampil
+  }
+  updateCarousel();
+});
+
+// Recalculate saat resize
+window.addEventListener("resize", () => {
+  const maxIndex = getMaxIndex();
+  if (index > maxIndex) index = maxIndex;
+  updateCarousel();
+});
+
+// ========================================================================
+
+// Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".animate");
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          io.unobserve(entry.target); // stop animasi ulang
+        }
+      });
+    },
+    { threshold: 0.5 },
+  );
+
+  items.forEach((el, i) => {
+    el.style.setProperty("--i", i);
+    io.observe(el);
+  });
+});
+/* View Transition API */
+const firstVisit = !localStorage.getItem("visited");
+
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    if (!document.startViewTransition) return;
+
+    if (!firstVisit) return;
+
+    e.preventDefault();
+    document.startViewTransition(() => {
+      window.location.href = link.href;
+      localStorage.setItem("visited", "true");
+    });
+  });
+});
+
+// Tandai sudah kunjungan pertama saat selesai load
+if (firstVisit) {
+  localStorage.setItem("visited", "true");
+}
+
+// ==========================================================================
 // ** Bagian 1: Navigasi dan Hamburger Menu (diambil dari kebutuhan dasar website) **
 const navbarNav = document.querySelector(".navbar-nav");
 const hamburger = document.querySelector("#hamburger-menu");
@@ -18,100 +127,24 @@ if (hamburger) {
   });
 }
 
-// ** Bagian 2: Fungsi Modal Gambar Koleksi (Image Modal) **
-const imageModal = document.getElementById("imageModal");
-const modalImage = document.getElementById("modalImage");
-const captionText = document.getElementById("captionText");
-const closeButton = document.querySelector(".close-button");
-const body = document.body; // Mendefinisikan body untuk mengunci scroll
-
-if (imageModal && modalImage && captionText && closeButton) {
-  const galleryImages = document.querySelectorAll(".option-card-image");
-
-  galleryImages.forEach((image) => {
-    image.style.cursor = "pointer"; // Menambahkan visual feedback
-    image.addEventListener("click", function () {
-      // Tampilkan modal
-      imageModal.style.display = "flex";
-      // Set sumber gambar dan alt text (caption)
-      modalImage.src = this.src;
-      captionText.innerHTML = this.alt;
-
-      // Tambahkan class untuk animasi fade-in
-      requestAnimationFrame(() => {
-        modalImage.classList.add("show-modal-image");
-      });
-      // Mengunci scroll saat modal terbuka
-      body.classList.add("no-scroll");
-    });
-  });
-
-  // Fungsi untuk menutup modal
-  const closeModal = () => {
-    modalImage.classList.remove("show-modal-image");
-    // Gunakan event listener untuk transitionend agar performa lebih baik
-    modalImage.addEventListener(
-      "transitionend",
-      function handleTransitionEnd() {
-        imageModal.style.display = "none";
-        // Kembalikan scroll body
-        body.classList.remove("no-scroll");
-        // Hapus event listener setelah digunakan untuk menghindari duplikasi
-        modalImage.removeEventListener("transitionend", handleTransitionEnd);
-      },
-      { once: true }
-    );
-  };
-
-  // Tutup saat klik tombol X
-  closeButton.addEventListener("click", closeModal);
-
-  // Tutup saat klik di luar gambar modal
-  imageModal.addEventListener("click", function (e) {
-    // Hanya tutup jika yang diklik adalah area backdrop
-    if (e.target === imageModal) {
-      closeModal();
-    }
-  });
-
-  // Tutup saat menekan tombol ESC
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && imageModal.style.display === "flex") {
-      closeModal();
-    }
-  });
-}
-
-// ** Bagian 3: Validasi Form Kontak (Simulasi Sederhana) **
-const contactForm = document.querySelector("#contact form");
-
-if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // Mencegah submit default
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if (name === "" || email === "" || message === "") {
-      alert("⚠️ Mohon isi semua kolom di formulir kontak.");
-      return;
-    }
-
-    // Contoh validasi email sederhana
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      alert("📧 Format email tidak valid.");
-      return;
-    }
-
-    // Jika semua validasi lolos
-    alert(
-      "Terima kasih! Pesan Anda telah terkirim. Saya akan segera menghubungi Anda."
-    );
-    contactForm.reset(); // Kosongkan formulir setelah sukses
-  });
-}
-
-// ** Bagian 4: Inisialisasi Feather Icons **
+// ** Bagian 2: Inisialisasi Feather Icons **
 feather.replace();
+
+// ** Bagian 3: Dropdown Menu Koleksi **
+const dropdown = document.querySelector(".dropdown");
+const dropdownContent = document.querySelector(".dropdown-content");
+const toggleBtn = dropdown.querySelector("a");
+
+toggleBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  dropdownContent.classList.toggle("show-dropdown");
+});
+
+// Tutup dropdown saat klik di luar area dropdown
+document.addEventListener("click", (e) => {
+  if (!dropdown.contains(e.target)) {
+    dropdownContent.classList.remove("show-dropdown");
+  }
+});
+
+// ==========================================================================
