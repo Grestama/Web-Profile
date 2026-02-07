@@ -18,6 +18,7 @@
 
     <!-- My Style -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/story.css" />
   </head>
   <body>
     <!-- NavBar start-->
@@ -128,49 +129,48 @@
 
         <div class="carousel-track">
           <div class="gallery-item micro" style="--i: 0">
-            <img src="img/1.jpg" alt="Foto 1" class="gallery-image" />
-            <a href="#" class="gallery-button">Lihat Kenangan</a>
+            <img src="img/1.jpg" alt="Kenangan 1" class="gallery-image"/>
+            <a href="#" class="gallery-button" data-index="0">Lihat Kenangan</a>
           </div>
-
           <div class="gallery-item micro" style="--i: 1">
-            <img src="img/1.jpg" alt="Foto 2" class="gallery-image" />
-            <a href="#" class="gallery-button">Lihat Kenangan</a>
+            <img src="img/1.jpg" alt="Kenangan 2" class="gallery-image"/>
+            <a href="#" class="gallery-button" data-index="1">Lihat Kenangan</a>
           </div>
-
           <div class="gallery-item micro" style="--i: 2">
-            <img src="img/1.jpg" alt="Foto 3" class="gallery-image" />
-            <a href="#" class="gallery-button">Lihat Kenangan</a>
+            <img src="img/1.jpg" alt="Kenangan 3" class="gallery-image"/>
+            <a href="#" class="gallery-button" data-index="2">Lihat Kenangan</a>
           </div>
-
           <div class="gallery-item micro" style="--i: 3">
-            <img src="img/1.jpg" alt="Foto 4" class="gallery-image" />
-            <a href="#" class="gallery-button">Lihat Kenangan</a>
+            <img src="img/1.jpg" alt="Kenangan 4" class="gallery-image"/>
+            <a href="#" class="gallery-button" data-index="3">Lihat Kenangan</a>
           </div>
-
           <div class="gallery-item micro" style="--i: 4">
-            <img src="img/1.jpg" alt="Foto 5" class="gallery-image" />
-            <a href="#" class="gallery-button">Lihat Kenangan</a>
+            <img src="img/1.jpg" alt="Kenangan 5" class="gallery-image"/>
+            <a href="#" class="gallery-button" data-index="4">Lihat Kenangan</a>
           </div>
-
           <div class="gallery-item micro" style="--i: 5">
-            <img src="img/1.jpg" alt="Foto 6" class="gallery-image" />
-            <a href="#" class="gallery-button">Lihat Kenangan</a>
+            <img src="img/1.jpg" alt="Kenangan 6" class="gallery-image"/>
+            <a href="#" class="gallery-button" data-index="5">Lihat Kenangan</a>
           </div>
-
           <div class="gallery-item micro" style="--i: 6">
-            <img src="img/1.jpg" alt="Foto 7" class="gallery-image" />
-            <a href="#" class="gallery-button">Lihat Kenangan</a>
+            <img src="img/1.jpg" alt="Kenangan 7" class="gallery-image"/>
+            <a href="#" class="gallery-button" data-index="6">Lihat Kenangan</a>
           </div>
-
           <div class="gallery-item micro" style="--i: 7">
-            <img src="img/1.jpg" alt="Foto 8" class="gallery-image" />
-            <a href="#" class="gallery-button">Lihat Kenangan</a>
+            <img src="img/1.jpg" alt="Kenangan 8" class="gallery-image"/>
+            <a href="#" class="gallery-button" data-index="7">Lihat Kenangan</a>
           </div>
         </div>
 
         <button class="carousel-btn next micro">›</button>
       </div>
     </section>
+    <div id="imageModal" class="modal">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <button class="nav-btn prev" onclick="changeImage(-1)">❮</button>
+      <img id="modalImage" src="" />
+      <button class="nav-btn next" onclick="changeImage(1)">❯</button>
+    </div>
 
     <!-- Part of TemanKita Section End -->
 
@@ -266,5 +266,6 @@
     </script>
     <!-- My javascript -->
     <script src="js/script.js"></script>
+    <script src="js/script1.js"></script>
   </body>
 </html>
