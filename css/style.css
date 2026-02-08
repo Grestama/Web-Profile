@@ -106,7 +106,7 @@ body {
   align-items: center;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0), rgba(255, 157, 0, 0.949)),
-    url("../img/asal.png");
+    url("../img/1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -203,6 +203,21 @@ body {
 }
 
 .header-info p {
+  max-width: 50rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--over);
+}
+
+.footer-info {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.footer-info p {
   max-width: 50rem;
   margin: 0 auto;
   font-size: 1.2rem;

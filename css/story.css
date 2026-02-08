@@ -1,3 +1,8 @@
+:root {
+  --primary: #fca311;
+  --bg: #fff;
+  --over: #1d2f58;
+}
 .modal {
   display: none;
   position: fixed;
@@ -96,6 +101,257 @@
   font-size: 1rem;
   font-weight: 500;
 }
+/* New Session */
+/* Hero start */
+/* Hero Section */
+.hero1 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 157, 0, 0.949)),
+    url("../img/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+.hero1 .logo-wrapper {
+  width: 300px;
+  height: 80px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.hero1 .logo-wrapper .logo {
+  width: 100%;
+  height: auto;
+}
+
+.hero1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background: linear-gradient(0deg, var(--bg) 9%, rgba(255, 255, 255, 0) 25%);
+  z-index: 1;
+}
+
+.hero1 .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  z-index: 10;
+}
+
+.hero1 .content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  text-shadow: 0px 1px 3px rgba(1, 1, 3, 0.5);
+  color: var(--bg);
+  margin-bottom: 1.2rem;
+}
+
+.hero1 .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--bg);
+  background-color: var(--over);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+  text-decoration: none;
+}
+
+.hero1 .content .cta:hover {
+  background-color: var(--bg);
+  color: var(--over);
+  transform: translateY(-4px);
+}
+
+/* Hero end */
+
+/* Section start */
+.section-info1 {
+  padding: 2% 8% 3rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  background: linear-gradient(var(--bg), var(--bg)) padding-box;
+}
+
+.header-info1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header-info1 h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.header-info1 h2 span {
+  color: var(--over);
+}
+
+.header-info1 .logo-wrapper1 {
+  width: 300px;
+  height: 80px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.header-info1 .logo-wrapper1 .logo1 {
+  width: 100%;
+  height: auto;
+}
+
+.header-info1 p {
+  max-width: 50rem;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--over);
+}
+
+.footer-info1 {
+  text-align: justify;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.footer-info1 p {
+  width: 100%;
+  padding: 0 0 1rem;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--over);
+}
+
+.grid-info1 {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.image-box1 {
+  flex: 0 0 40%;
+  max-width: 40%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-box1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-box1:hover img {
+  transform: scale(1.05);
+}
+
+.label-info1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: var(--primary);
+  color: white;
+  border-top-left-radius: 10px;
+}
+
+.content-info1 {
+  flex: 1;
+  overflow: visible;
+}
+
+.item-info1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.item-info1 h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--over);
+  margin: 0 0 6px 0;
+}
+
+.item-info1 p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--over);
+  margin: 6px 0 0 0;
+}
+/* Section end */
+
+/* Animate start */
+/* Animation */
+.animate1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.animate1.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-stagger] .animate1 {
+  transition-delay: calc(var(--i) * 0.08s);
+}
+
+.micro:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animate end */
 
 /* Mobile */
 @media (max-width: 768px) {

@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.5 },
+    { threshold: 0 },
   );
 
   items.forEach((el, i) => {
